@@ -1,0 +1,41 @@
+{
+  "name": "express-mesto-gha",
+  "version": "1.0.0",
+  "description": "Проект Mesto фронтенд + бэкенд",
+  "main": "app.js",
+  "scripts": {
+    "start": "dotenv -v NODE_ENV=production -v PORT=3000 node app.js",
+    "dev": "dotenv -v NODE_ENV=development -v PORT=3000 nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykuptsova/express-mesto-gha.git"
+  },
+  "keywords": [
+    "yandex",
+    "praktikum"
+  ],
+  "author": "Jaroslavna Kuptsova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ykuptsova/express-mesto-gha/issues"
+  },
+  "homepage": "https://github.com/ykuptsova/express-mesto-gha#readme",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.1",
+    "dotenv": "^16.0.3",
+    "dotenv-cli": "^6.0.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "validator": "^13.7.0"
+  }
+}
