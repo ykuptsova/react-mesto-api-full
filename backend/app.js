@@ -66,11 +66,11 @@ app.use('/cards', require('./routes/cards'));
 app.use('/', require('./routes/not-found'));
 
 // подключаем логгер ошибок
-app.use(errorLogger);
+//app.use(errorLogger);
 
 // обрабатываем ошибки централизованно
 app.use(errors());
-app.use(handleError);
+//app.use(handleError);
 
 // поднимаем сервер по порту
 app.listen(PORT, () => {
