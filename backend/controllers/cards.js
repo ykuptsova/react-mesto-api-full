@@ -60,6 +60,7 @@ module.exports.likeCard = (req, res, next) => {
       req.params.cardId,
       // добавить _id в массив, если его там нет
       { $addToSet: { likes: req.user._id } },
+      { new: true, runValidators: true },
     )
     .populate(['owner', 'likes'])
     .then((card) => {

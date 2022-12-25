@@ -85,7 +85,6 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.getUserInfo = (req, res, next) => {
-  console.log('getUserInfo', req.user._id);
   User.findById(req.user._id)
     .then((user) => {
       if (!user) {
