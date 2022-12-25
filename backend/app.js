@@ -5,6 +5,7 @@ const { celebrate, Joi, errors } = require('celebrate');
 const handleError = require('./middlewares/handle-error');
 const { login, createUser } = require('./controllers/users');
 const { LINK } = require('./utils/regex');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 // разбираем настройки окружения
 const { PORT = 3010, NODE_ENV } = process.env;
@@ -25,6 +26,9 @@ const app = express();
 
 // разбираем body в json
 app.use(express.json());
+
+// подключаем логгер запросов
+app.use(requestLogger);
 
 // добавляем руты
 app.post(
@@ -53,6 +57,9 @@ app.post(
 app.use('/users', require('./routes/users'));
 app.use('/cards', require('./routes/cards'));
 app.use('/', require('./routes/not-found'));
+
+// подключаем логгер ошибок
+app.use(errorLogger);
 
 // обрабатываем ошибки централизованно
 app.use(errors());
