@@ -1,0 +1,21 @@
+.profile__new-card-button {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  transition: opacity 300ms;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  flex-shrink: 0;
+  background: url('../../../images/plus.svg') center no-repeat;
+}
+
+.profile__new-card-button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 635px) {
+  .profile__new-card-button {
+    width: 100%;
+  }
+} 

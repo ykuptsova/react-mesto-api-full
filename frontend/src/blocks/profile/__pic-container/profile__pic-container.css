@@ -1,0 +1,12 @@
+.profile__pic-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile__pic-container:hover .profile__pic {
+  filter: brightness(20%);
+}
+
+.profile__pic-container:hover .profile__pencil {
+  opacity: 1;
+}

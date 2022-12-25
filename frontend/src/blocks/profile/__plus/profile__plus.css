@@ -1,0 +1,15 @@
+.profile__plus {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 22px;
+  width: 22px;
+}
+
+
+@media (max-width: 335px) {
+  .profile__plus {
+    height: 16px;
+    width: 16px;
+  }
+} 

@@ -1,0 +1,15 @@
+.profile__texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 18px 0 30px;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 650px) {
+  .profile__texts {
+    margin: 26px 0 36px 0px;
+    align-items: center;
+  }
+} 

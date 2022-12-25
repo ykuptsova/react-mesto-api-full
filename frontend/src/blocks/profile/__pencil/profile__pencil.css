@@ -1,0 +1,7 @@
+.profile__pencil {
+  position: absolute;
+  top: 47px;
+  left: 47px;
+  opacity: 0;
+  transition: opacity 300ms;
+}

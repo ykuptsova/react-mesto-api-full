@@ -1,0 +1,14 @@
+.info-tooltip__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 430px;
+  max-height: 330px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 2;
+  padding: 60px 36px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
