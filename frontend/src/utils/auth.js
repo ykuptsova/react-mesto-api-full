@@ -47,11 +47,12 @@ class Auth {
     return `${this._options.baseUrl}/${path}`
   }
 
-  _init(config) {
-    return {
-      headers: this._options.headers,
-      ...config,
-    }
+  _init(config = {}) {
+    config.headers = {
+      ...config.headers,
+      ...this._options.headers,
+    };
+    return config
   }
 
   _handleResponse(res) {

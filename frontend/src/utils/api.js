@@ -39,7 +39,7 @@ class Api {
   getInitialCards(userId) {
     return fetch(this._url('cards'), this._init())
       .then(this._handleResponse)
-      .then((cards) => cards.map((card) => this._toCard(card, userId)))
+      .then((cards) => cards.data.map((card) => this._toCard(card, userId)))
   }
 
   addCard(data) {
@@ -52,7 +52,7 @@ class Api {
     }
     return fetch(this._url('cards'), this._init(config))
       .then(this._handleResponse)
-      .then((card) => this._toCard(card, card.owner._id))
+      .then((card) => this._toCard(card, card.owner))
   }
 
   deleteCard(id) {
@@ -71,7 +71,7 @@ class Api {
     }
     return fetch(this._url(`cards/${id}/likes`), this._init(config))
       .then(this._handleResponse)
-      .then((card) => this._toCard(card, userId))
+      .then((card) => this._toCard(card.data, userId))
   }
 
   unlikeCard(id, userId) {
@@ -80,7 +80,7 @@ class Api {
     }
     return fetch(this._url(`cards/${id}/likes`), this._init(config))
       .then(this._handleResponse)
-      .then((card) => this._toCard(card, userId))
+      .then((card) => this._toCard(card.data, userId))
   }
 
   // --- вспомогательные приватные методы
@@ -88,11 +88,13 @@ class Api {
     return `${this._options.baseUrl}/${path}`
   }
 
-  _init(config) {
-    return {
-      headers: this._options.headers,
-      ...config,
+  _init(config = {}) {
+    config.headers = {
+      Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+      ...config.headers,
+      ...this._options.headers,
     }
+    return config
   }
 
   _toCard(card, userId) {
@@ -108,6 +110,7 @@ class Api {
   }
 
   _toUserInfo(userInfo) {
+    userInfo = userInfo.data
     return {
       _id: userInfo._id,
       name: userInfo.name,
