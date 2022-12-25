@@ -61,8 +61,8 @@ app.post(
   }),
   createUser,
 );
-app.use('/users', require('./routes/users'));
-app.use('/cards', require('./routes/cards'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/cards', require('./routes/cards'));
 app.use('/', require('./routes/not-found'));
 
 // подключаем логгер ошибок
