@@ -30,6 +30,13 @@ app.use(express.json());
 // подключаем логгер запросов
 app.use(requestLogger);
 
+// краш-тест сервера
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 // добавляем руты
 app.post(
   '/signin',
