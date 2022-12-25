@@ -123,11 +123,10 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://web-exp.nomoredomains.club/'
-  // headers: {
-  //   authorization: 'aa3d044d-2678-4a15-accd-c1c94db4c73c',
-  //   'Content-Type': 'application/json',
-  // },
+  baseUrl: 'http://web-exp.nomoredomains.club/api',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 })
 
 export default api

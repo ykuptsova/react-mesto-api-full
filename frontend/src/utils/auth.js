@@ -61,9 +61,8 @@ class Auth {
 }
 
 const auth = new Auth({
-  baseUrl: 'https://auth.nomoreparties.co',
+  baseUrl: 'http://web-exp.nomoredomains.club/api',
   headers: {
-    // authorization: 'aa3d044d-2678-4a15-accd-c1c94db4c73c',
     'Content-Type': 'application/json',
   },
 })
