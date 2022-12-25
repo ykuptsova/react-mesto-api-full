@@ -1,6 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const express = require('express');
+const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
 const handleError = require('./middlewares/handle-error');
 const { login, createUser } = require('./controllers/users');
@@ -23,6 +24,9 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 
 // создаем сервер
 const app = express();
+
+// обрабатываем CORS заголовки
+app.use(cors());
 
 // разбираем body в json
 app.use(express.json());
