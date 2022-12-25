@@ -28,7 +28,7 @@ const app = express();
 app.use(express.json());
 
 // подключаем логгер запросов
-app.use(requestLogger);
+//app.use(requestLogger);
 
 // краш-тест сервера
 app.get('/crash-test', () => {
@@ -70,7 +70,7 @@ app.use('/', require('./routes/not-found'));
 
 // обрабатываем ошибки централизованно
 app.use(errors());
-//app.use(handleError);
+app.use(handleError);
 
 // поднимаем сервер по порту
 app.listen(PORT, () => {
