@@ -28,7 +28,7 @@ const app = express();
 app.use(express.json());
 
 // подключаем логгер запросов
-//app.use(requestLogger);
+app.use(requestLogger);
 
 // краш-тест сервера
 app.get('/crash-test', () => {
@@ -66,7 +66,7 @@ app.use('/cards', require('./routes/cards'));
 app.use('/', require('./routes/not-found'));
 
 // подключаем логгер ошибок
-//app.use(errorLogger);
+app.use(errorLogger);
 
 // обрабатываем ошибки централизованно
 app.use(errors());
