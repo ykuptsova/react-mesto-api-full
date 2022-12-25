@@ -123,7 +123,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://web-exp.nomoredomains.club/api',
+  baseUrl: 'https://web-exp.nomoredomains.club/api',
   headers: {
     'Content-Type': 'application/json',
   },

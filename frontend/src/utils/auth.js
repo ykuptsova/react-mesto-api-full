@@ -61,7 +61,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  baseUrl: 'http://web-exp.nomoredomains.club/api',
+  baseUrl: 'https://web-exp.nomoredomains.club/api',
   headers: {
     'Content-Type': 'application/json',
   },
