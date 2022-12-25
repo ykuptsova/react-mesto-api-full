@@ -9,11 +9,11 @@
 `frontend/` — фронтенд
 
 ## Запуск проекта
-Сайт доступен по ссылке: http://web-exp.nomoredomains.club
+Сайт доступен по ссылке: https://web-exp.nomoredomains.club
 
 IP  158.160.47.246
-Frontend http://web-exp.nomoredomains.club
-Backend  http://web-exp.nomoredomains.club/api
+Frontend https://web-exp.nomoredomains.club
+Backend  https://api.nomoredomains.club
 
 ## Используемые технологии:
 - HTML5
