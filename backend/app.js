@@ -7,7 +7,7 @@ const { login, createUser } = require('./controllers/users');
 const { LINK } = require('./utils/regex');
 
 // разбираем настройки окружения
-const { PORT = 3000, NODE_ENV } = process.env;
+const { PORT = 3010, NODE_ENV } = process.env;
 if (NODE_ENV !== 'production') {
   process.env.JWT_SECRET = 'dev-secret';
 }
