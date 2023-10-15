@@ -8,12 +8,8 @@
 `backend/` — бэкенд
 `frontend/` — фронтенд
 
-## Запуск проекта
-Сайт доступен по ссылке: https://web-exp.nomoredomains.club
-
-IP  158.160.47.246
-Frontend https://web-exp.nomoredomains.club
-Backend  https://api.nomoredomains.club
+## Ссылка на проект
+https://github.com/ykuptsova/react-mesto-api-full
 
 ## Используемые технологии:
 - HTML5
